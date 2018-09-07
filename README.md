@@ -1,4 +1,30 @@
-# Site
+# Go Beyond Five Minutes Site
+
+# Setup Elixir and Phoenix
+
+These commands were used to install Elixir and dependencies, on 
+Mac OS X with Homebrew:
+
+```console
+$ brew install elixir
+```
+
+This command installs Elixir, 
+[`mix`](https://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html) (build tool), and various other things.
+
+# Create ths repository
+
+These were the commands used to set up this repository, taken
+from 
+[hexdocs.pm/phoenix/up_and_running.html#content](https://hexdocs.pm/phoenix/up_and_running.html#content):
+
+```console
+$ mix phx.new site
+$ cd site
+$ mix ecto.create
+```
+
+# Development
 
 # To Set up The Elixir Tools
 
