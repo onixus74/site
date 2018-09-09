@@ -16,7 +16,6 @@ defmodule SiteWeb.Router do
   scope "/", SiteWeb do
     pipe_through :browser # Use the default browser stack
     resources "/registrations", UserController, only: [:create, :new]
-    resources "/users", UserController
     resources "/lessons", LessonController
     get "/sign-in", SessionController, :new
     post "/sign-in", SessionController, :create

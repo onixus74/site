@@ -3,6 +3,8 @@ defmodule SiteWeb.LessonController do
 
   alias Site.Lessons
   alias Site.Lessons.Lesson
+  alias Site.Accounts
+
   plug :check_auth when action in [:new, :create, :edit, :update, :delete]
 
   defp check_auth(conn, _args) do
