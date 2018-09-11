@@ -15,6 +15,6 @@ adapter: Ecto.Adapters.Postgres,
 username: "postgres",
 password: "postgres",
 database: "site_dev",
-hostname: "localhost",
+hostname: "dev",
 pool_size: 10,
 pool: Ecto.Adapters.SQL.Sandbox

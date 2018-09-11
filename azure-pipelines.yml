@@ -12,7 +12,7 @@ variables:
 steps:
 - script: |
     docker-compose up -d
-    mix test
+    docker build --network=site_default --build-arg MIX_ENV=test -f Dockerfile.test .
     docker-compose down
   displayName: 'test'
 - script: docker build -f Dockerfile -t $(imageName) .
