@@ -31,7 +31,6 @@ defmodule Site.AccountsTest do
 
     test "create_user/1 with valid data creates a user" do
       assert {:ok, %User{} = user} = Accounts.create_user(@valid_attrs)
-      assert user.encrypted_password == "some encrypted_password"
       assert user.username == "some username"
     end
 
@@ -43,7 +42,6 @@ defmodule Site.AccountsTest do
       user = user_fixture()
       assert {:ok, user} = Accounts.update_user(user, @update_attrs)
       assert %User{} = user
-      assert user.encrypted_password == "some updated encrypted_password"
       assert user.username == "some updated username"
     end
 
