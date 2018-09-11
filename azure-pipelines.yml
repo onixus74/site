@@ -12,7 +12,6 @@ variables:
 steps:
 - script: |
     docker-compose -p site up -d test
-    docker wait site_test_1
     docker build -f Dockerfile .
     docker-compose -p site down -d test
   displayName: 'test'
