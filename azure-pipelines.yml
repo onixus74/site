@@ -11,7 +11,7 @@ variables:
 
 steps:
 - script: |
-    docker-compose up -d --project-name site
+    docker-compose -p site up -d
     docker build --network=site_default --build-arg MIX_ENV=test -f Dockerfile.test .
     docker-compose down
   displayName: 'test'
