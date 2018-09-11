@@ -1,6 +1,6 @@
 # Go Beyond Five Minutes Site
 
-[![Build Status](https://dev.azure.com/gophersnacks/gophersnacks/_apis/build/status/gophersnacks.site)
+[![Build Status](https://dev.azure.com/gophersnacks/gophersnacks/_apis/build/status/gophersnacks.site)]
 
 # Setup Elixir and Phoenix
 
