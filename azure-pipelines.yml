@@ -13,7 +13,7 @@ steps:
 - script: |
     docker-compose -p site up -d test
     docker build -f Dockerfile .
-    docker-compose -p site down -d test
+    docker-compose down
   displayName: 'test'
 - script: docker build -f Dockerfile -t $(imageName) .
   displayName: 'docker build'
