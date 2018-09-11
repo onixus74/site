@@ -10,5 +10,10 @@ variables:
   imageName: 'gophersnacks:$(build.buildId)'
 
 steps:
+- script: |
+    docker-compose -p site up -d
+    docker build --network=site_default --build-arg MIX_ENV=test -f Dockerfile.test .
+    docker-compose down
+  displayName: 'test'
 - script: docker build -f Dockerfile -t $(imageName) .
   displayName: 'docker build'

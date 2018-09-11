@@ -15,7 +15,11 @@ defmodule SiteWeb.Router do
 
   scope "/", SiteWeb do
     pipe_through :browser # Use the default browser stack
-
+    resources "/registrations", UserController, only: [:create, :new]
+    resources "/lessons", LessonController
+    get "/sign-in", SessionController, :new
+    post "/sign-in", SessionController, :create
+    delete "/sign-out", SessionController, :delete
     get "/", PageController, :index
   end
 

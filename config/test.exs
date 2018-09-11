@@ -11,9 +11,10 @@ config :logger, level: :warn
 
 # Configure your database
 config :site, Site.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "site_test",
-  hostname: "localhost",
-  pool: Ecto.Adapters.SQL.Sandbox
+adapter: Ecto.Adapters.Postgres,
+username: "postgres",
+password: "postgres",
+database: "site_dev",
+hostname: "dev",
+pool_size: 10,
+pool: Ecto.Adapters.SQL.Sandbox

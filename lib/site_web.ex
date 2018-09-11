@@ -40,6 +40,7 @@ defmodule SiteWeb do
       import SiteWeb.Router.Helpers
       import SiteWeb.ErrorHelpers
       import SiteWeb.Gettext
+      import SiteWeb.Helpers.Auth, only: [signed_in?: 1]
     end
   end
 
