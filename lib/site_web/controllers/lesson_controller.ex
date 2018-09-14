@@ -16,7 +16,7 @@ defmodule SiteWeb.LessonController do
     else
       conn
       |> put_flash(:error, "You need to be signed in to access that page.")
-      |> redirect(to: "/")
+      |> redirect(to: "/sign-in")
       |> halt()
     end
   end
