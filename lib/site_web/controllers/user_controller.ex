@@ -7,7 +7,7 @@ defmodule SiteWeb.UserController do
 
   def new(conn, _params) do
     changeset = Accounts.change_user(%User{})
-    render(conn, "new.html", changeset: changeset)
+    render conn, "new.html", changeset: changeset,  scripts: ["/nim/nimcache/other.js"]
   end
 
   def create(conn, %{"user" => user_params}) do
